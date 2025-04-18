@@ -1,34 +1,27 @@
-import { Select, Input, Row, Col } from 'antd';
-import { SearchOutlined } from '@ant-design/icons';
-import { FilterType } from '../types/Types';
+import { Select, Row, Col } from "antd";
+
+import { FilterType } from "../types/Types";
 
 const { Option } = Select;
-const { Search } = Input;
 
 interface FiltersProps {
   onFilterChange: (filterType: FilterType, value: string | string[]) => void;
-  onSearch: (searchTerm: string) => void;
 }
 
-const Filters = ({ onFilterChange, onSearch }: FiltersProps) => {
+const Filters = ({ onFilterChange }: FiltersProps) => {
   return (
     <div className="p-4 bg-white shadow-sm">
-      <Row gutter={[16, 16]} align="middle">
+      <Row gutter={[16, 16]} align="middle" justify={"end"}>
         <Col xs={24} sm={12} md={8}>
-          <Search
-            placeholder="Search products..."
-            allowClear
-            enterButton={<SearchOutlined />}
-            size="large"
-            onSearch={onSearch}
-          />
+          Filters
         </Col>
+
         <Col xs={24} sm={12} md={8}>
           <Select
             placeholder="Sort by"
-            style={{ width: '100%' }}
+            style={{ width: "100%" }}
             size="large"
-            onChange={(value: string) => onFilterChange('sort', value)}
+            onChange={(value: string) => onFilterChange("sort", value)}
           >
             <Option value="price_asc">Price: Low to High</Option>
             <Option value="price_desc">Price: High to Low</Option>
@@ -39,10 +32,10 @@ const Filters = ({ onFilterChange, onSearch }: FiltersProps) => {
         <Col xs={24} sm={12} md={8}>
           <Select
             placeholder="Filter by category"
-            style={{ width: '100%' }}
+            style={{ width: "100%" }}
             size="large"
             mode="multiple"
-            onChange={(value: string[]) => onFilterChange('category', value)}
+            onChange={(value: string[]) => onFilterChange("category", value)}
           >
             <Option value="clothing">Clothing</Option>
             <Option value="electronics">Electronics</Option>
