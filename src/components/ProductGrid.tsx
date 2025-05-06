@@ -9,7 +9,7 @@ interface ProductGridProps {
 
 const ProductGrid = ({ products, onAddToCart }: ProductGridProps) => {
   return (
-    <Row gutter={[16, 16]} className="p-4">
+    <Row gutter={[16, 16]} className="p-4 ">
       {products.map((product) => (
         <Col xs={24} sm={12} md={8} lg={6} key={product.id}>
           <ProductCard product={product} onAddToCart={onAddToCart} />

@@ -39,12 +39,12 @@ const Navbar = ({ cartItems, onSearch }: NavbarProps) => {
          
           <Col xs={12} sm={6} md={4} className="flex items-center">
             <Link to="/" className="text-xl font-bold hover:text-blue-200 transition-colors">
-              <Title level={4} className="m-0 text-white">Small Shop</Title>
+              <Title level={4} className="m-0 text-gray-100">Small Shop</Title>
             </Link>
           </Col>
 
           
-          <Col xs={0} sm={0} md={12} className="transition-all">
+          <Col xs={0} sm={0} md={8} className="transition-all">
             <Search
               placeholder="Search products..."
               allowClear
@@ -56,9 +56,9 @@ const Navbar = ({ cartItems, onSearch }: NavbarProps) => {
           </Col>
 
          
-          <Col xs={0} sm={0} md={4}>
-            <div className="flex justify-end items-center space-x-4">
-              <Link to="/" className="hover:text-blue-200 transition-colors">
+          <Col xs={0} sm={0} md={6}>
+            <div className="flex justify-between items-center space-x-4">
+              <Link to="/" className="hover:text-blue-200 text-white transition-colors">
                 Home
               </Link>
               <Link to="/about" className="hover:text-blue-200 transition-colors">
@@ -70,7 +70,7 @@ const Navbar = ({ cartItems, onSearch }: NavbarProps) => {
             </div>
           </Col>
 
-          <Col xs={6} sm={6} md={4}>
+          <Col xs={6} sm={6} md={6}>
             <div className="flex items-center justify-end">
               <Link to="/cart" className="hover:text-blue-200 transition-colors p-2">
                 <Badge count={cartItemCount} showZero size="small" className="animate-pulse-if-items">

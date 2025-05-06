@@ -143,17 +143,17 @@ const Home = ({
 
   return (
     <div className="container mx-auto px-4 md:px-8 lg:px-16 ">
-      <div className="flex items-center justify-between mb-8">
+      <div className="flex flex-col md:flex-row items-center justify-between mb-8 gap-8">
         <div className="px-4 md:px-8 lg:px-16 text-center md:text-left w-full md:w-1/2">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-amber-900 mb-4">
             Authentic Nepali Handicrafts & Treasures
           </h1>
-          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl text-gray-700 mb-8 max-w-3xl mx-auto md:mx-0">
             Discover unique handcrafted treasures from the heart of the
             Himalayas. Each item tells a story of Nepal's rich cultural heritage
             and skilled artisans.
           </p>
-          <div className="space-x-4 gap-4 flex">
+          <div className="space-x-4 gap-4 flex justify-center md:justify-start">
             <Button
               type="primary"
               size="large"
@@ -173,8 +173,8 @@ const Home = ({
             </Button>
           </div>
         </div>
-        <div className="hidden md:block w-1/2 bg-gray-400 h-screen">
-          <img alt="Nepali Handicrafts" height={400} width={400} />
+        <div className="w-full md:w-1/2 bg-gray-400 h-64 md:h-screen">
+          <img src="./images/store-4945671_1280.jpg" alt="Nepali Handicrafts" className="h-full w-full object-cover object-center" />
         </div>
       </div>
 

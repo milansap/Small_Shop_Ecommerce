@@ -1,3 +1,7 @@
+import { Link } from "react-router-dom"
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faFacebook, faTwitter, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white pt-12 pb-8">
@@ -5,12 +9,12 @@ const Footer = () => {
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
                     <div>
-                        <h3 className="text-xl font-bold mb-4">Our Company</h3>
+                        <h3 className="text-xl font-bold mb-4">Small Shop</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-gray-300">About Us</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Careers</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Privacy Policy</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Terms of Service</a></li>
+                            <li><Link to="/about" className="hover:text-gray-300">About Us</Link></li>
+                            <li><Link to="/careers" className="hover:text-gray-300">Careers</Link></li>
+                            <li><Link to="/privacy" className="hover:text-gray-300">Privacy Policy</Link></li>
+                            <li><Link to="/terms" className="hover:text-gray-300">Terms of Service</Link></li>
                         </ul>
                     </div>
                     
@@ -18,10 +22,10 @@ const Footer = () => {
                     <div>
                         <h3 className="text-xl font-bold mb-4">Customer Service</h3>
                         <ul className="space-y-2">
-                            <li><a href="#" className="hover:text-gray-300">Contact Us</a></li>
-                            <li><a href="#" className="hover:text-gray-300">FAQ</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Returns & Refunds</a></li>
-                            <li><a href="#" className="hover:text-gray-300">Shipping Info</a></li>
+                            <li><Link to="/contact" className="hover:text-gray-300">Contact Us</Link></li>
+                            <li><Link to="/faq" className="hover:text-gray-300">FAQ</Link></li>
+                            <li><Link to="/returns" className="hover:text-gray-300">Returns & Refunds</Link></li>
+                            <li><Link to="/shipping" className="hover:text-gray-300">Shipping Info</Link></li>
                         </ul>
                     </div>
                     
@@ -52,11 +56,12 @@ const Footer = () => {
                 
                 {/* Social Media & Copyright */}
                 <div className="border-t border-gray-800 mt-8 pt-8 flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex space-x-4 mb-4 md:mb-0">
-                        <a href="#" className="hover:text-blue-400"><i className="fab fa-facebook"></i></a>
-                        <a href="#" className="hover:text-blue-400"><i className="fab fa-twitter"></i></a>
-                        <a href="#" className="hover:text-blue-400"><i className="fab fa-instagram"></i></a>
-                        <a href="#" className="hover:text-blue-400"><i className="fab fa-linkedin"></i></a>
+                    <div className="flex space-x-4 mb-4 md:mb-0"> 
+                  
+                        <Link to="#" className="hover:text-blue-400"><FontAwesomeIcon icon={faFacebook} /></Link>
+                        <Link to="#" className="hover:text-blue-400"><FontAwesomeIcon icon={faTwitter} /></Link>
+                        <Link to="#" className="hover:text-blue-400"><FontAwesomeIcon icon={faInstagram} /></Link>
+                        <Link to="#" className="hover:text-blue-400"><FontAwesomeIcon icon={faLinkedin} /></Link>
                     </div>
                     <div className="text-gray-400 text-sm">
                         © {new Date().getFullYear()} Made by Milan. All rights reserved.

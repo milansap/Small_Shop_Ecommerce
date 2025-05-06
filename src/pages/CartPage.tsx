@@ -11,7 +11,7 @@ interface CartPageProps {
 const CartPage = ({ cartItems, onRemoveItem, onUpdateQuantity }: CartPageProps) => {
   return (
     <div>
-      <Navbar cartItems={cartItems} />
+      <Navbar  cartItems={cartItems} />
       <Cart 
         cartItems={cartItems} 
         onRemoveItem={onRemoveItem} 
